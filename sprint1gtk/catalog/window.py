@@ -1,6 +1,7 @@
 import gi 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
+from gi.repository import GdkPixbuf
 from cell import Cell
 
 class MainWindow(Gtk.Window):
@@ -22,12 +23,27 @@ class MainWindow(Gtk.Window):
 		scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
 		scrolled.add(self.flowbox)
 		self.add(scrolled)
-		
-		cell_one = Cell("Corgi", Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Corgii-edited.jpg"))
-		cell_two = Cell("Ovejero", Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Ovejero-edited.jpg"))
-		cell_three = Cell("Boyero de Verna", Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Boyero-de-Verna-edited.jpg"))
-		cell_four = Cell("Pug", Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Pug-edited.jpg"))
-		cell_five = Cell("Pastor Alemán", Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Pastor-Alemán-edited.jpg"))
+
+		image = Gtk.Image()
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\unedited\\Corgi.jpg", 200, 200, False)
+		image.set_from_pixbuf(pixbuf)
+		image2 = Gtk.Image()
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\unedited\\Ovejero.jpg", 200, 200, False)
+		image2.set_from_pixbuf(pixbuf)
+		image3 = Gtk.Image()
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\unedited\\Boyero-de-Verna.jpg", 200, 200, False)
+		image3.set_from_pixbuf(pixbuf)
+		image4 = Gtk.Image()
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\unedited\\Pug.jpg", 200, 200, False)
+		image4.set_from_pixbuf(pixbuf)
+		image5 = Gtk.Image()
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\unedited\\Pastor-Alemán.jpg", 200, 200, False)
+		image5.set_from_pixbuf(pixbuf)
+		cell_one = Cell("Corgi", image)
+		cell_two = Cell("Ovejero", image2)
+		cell_three = Cell("Boyero de Verna", image3)
+		cell_four = Cell("Pug", image4)
+		cell_five = Cell("Pastor Alemán", image5)
 		self.flowbox.add(cell_one)
 		self.flowbox.add(cell_two)
 		self.flowbox.add(cell_three)
