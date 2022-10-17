@@ -4,7 +4,7 @@ from gi.repository import Gtk
 
 class SubWindowYes(Gtk.Window):
 	box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-	label = Gtk.Label("Respuesta correcta")
+	label = Gtk.Label("Respuesta correcta")		#Ventá da resposta correcta
 	
 	def __init__(self):
 		super().__init__(title="Ventana de respuesta")

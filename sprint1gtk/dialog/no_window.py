@@ -2,7 +2,7 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class SubWindowNo(Gtk.Window):
+class SubWindowNo(Gtk.Window):		#Ventá da resposta incorrecta
 	box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 	label = Gtk.Label("Respuesta incorrecta")
 	
