@@ -10,23 +10,23 @@ class MainWindow(Gtk.Window):
     flowbox = Gtk.FlowBox()
 
     def __init__(self):
-        super().__init__(title="Catálogo")
+        super().__init__(title="Catálogo") #Nome da ventá máis o remate do programa cando se peche.
         self.connect("destroy", Gtk.main_quit)
         self.set_border_width(15)
         self.set_default_size(400, 400)
 
-        header = Gtk.HeaderBar(title="Perritos")
+        header = Gtk.HeaderBar(title="Perritos") #Formado da cabeceira.
         header.set_subtitle("Catálogo 2022")
         header.props.show_close_button = True
 
         self.set_titlebar(header)
 
-        scrolled = Gtk.ScrolledWindow()
+        scrolled = Gtk.ScrolledWindow() #Formado da ScrolledWindow.
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         scrolled.add(self.flowbox)
         self.add(scrolled)
 
-        image = Gtk.Image()
+        image = Gtk.Image() #Cambiado da resolución das imaxes mediante o pixbuf
         pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(
             "C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\unedited\\Corgi.jpg", 200,
             200, False)
@@ -51,7 +51,7 @@ class MainWindow(Gtk.Window):
             "C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\unedited\\Pastor-Alemán.jpg",
             200, 200, False)
         image5.set_from_pixbuf(pixbuf)
-        cell_one = Cell("Corgi", image)
+        cell_one = Cell("Corgi", image) #Engadido das imaxes ás celdas e logo á flowbox.
         cell_two = Cell("Ovejero", image2)
         cell_three = Cell("Boyero de Verna", image3)
         cell_four = Cell("Pug", image4)
