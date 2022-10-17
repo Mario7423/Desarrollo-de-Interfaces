@@ -20,7 +20,7 @@ class Cell(Gtk.EventBox):
     def on_click(self, widget, event): #Aquí compróbase qué imaxe foi escollida para amosar unha ventá con máis información.
         from detail_window import DetailWindow
         if self.name == "Corgi":
-           win = DetailWindow(Gtk.Label("Corgi"), Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Corgii-edited.jpg"), Gtk.Label("Un perro pequeño"))
+            win = DetailWindow(Gtk.Label("Corgi"), Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Corgii-edited.jpg"), Gtk.Label("Un perro pequeño"))
         elif self.name == "Pug":
             win = DetailWindow(Gtk.Label("Pug"), Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Pug-edited.jpg"), Gtk.Label("Un perro enano"))
         elif self.name == "Pastor Alemán":
