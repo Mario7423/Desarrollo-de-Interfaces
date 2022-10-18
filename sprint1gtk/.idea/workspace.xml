@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bb11fd8-a6c1-4489-8b93-e96f55084b2b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/catalog/cell.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/cell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint2catalog/load_window.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint2catalog/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +22,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/msys64/home/usuario/Desarrollo-de-Interfaces/sprint1gtk"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/msys64/home/usuario/Desarrollo-de-Interfaces/sprint1gtk&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
