@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bb11fd8-a6c1-4489-8b93-e96f55084b2b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../sprint2catalog/load_window.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sprint2catalog/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint2catalog/catalog/load_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint2catalog/catalog/load_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint2catalog/catalog/window.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint2catalog/catalog/window.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
