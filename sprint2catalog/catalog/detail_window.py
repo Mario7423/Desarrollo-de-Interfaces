@@ -14,6 +14,8 @@ class DetailWindow(Gtk.Window):
     def __init__(self, label, image, label2): #Engadimos os dous labels, un co nome e outro ca descripción, máis unha imaxe.
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         super().__init__(title="Hola")
+        self.set_position(Gtk.WindowPosition.CENTER)
+        self.set_default_size(300, 300)
         self.add(box)
         box.pack_start(label, True, True, 0)
         box.pack_start(image, True, True, 0)

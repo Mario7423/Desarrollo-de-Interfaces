@@ -10,6 +10,7 @@ class MainWindow(Gtk.Window):
 
     def __init__(self, data_source):
         super().__init__(title="Catálogo") #Nome da ventá máis o remate do programa cando se peche.
+        self.set_position(Gtk.WindowPosition.CENTER)
         self.connect("destroy", Gtk.main_quit)
         self.set_border_width(15)
         self.set_default_size(400, 400)
@@ -26,5 +27,5 @@ class MainWindow(Gtk.Window):
         self.add(scrolled)
 
         for item in data_source:
-            cell = Cell(item.get("name"), item.get("gtk_image"))
+            cell = Cell(item.get("name"),item.get("description"), item.get("gtk_image"))
             self.flowbox.add(cell)
