@@ -21,7 +21,7 @@ class Cell(Gtk.EventBox):
         self.add(box)
         self.connect("button-release-event", self.on_click)
 
-    def on_click(self, widget, event): #Aquí compróbase qué imaxe foi escollida para amosar unha ventá con máis información.
+    def on_click(self, widget, event): #Aquí amosase unha ventá con máis información dependendo da celda escollida.
         from detail_window import DetailWindow
         nuevaImagen = Gtk.Image()
         nuevaImagen.set_from_pixbuf(self.image.get_pixbuf())

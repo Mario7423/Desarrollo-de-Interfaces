@@ -5,7 +5,7 @@ from gi.repository import Gtk, GLib
 from window import MainWindow
 
 class LoadWindow(Gtk.Window):
-    label = Gtk.Label("Cargando elementos...")
+    label = Gtk.Label("Cargando elementos...") # Mensaxe de cargando mentras cargan os elementos
     spinner = Gtk.Spinner()
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=20)
 
@@ -22,7 +22,7 @@ class LoadWindow(Gtk.Window):
         self.add(self.box)
         self.launch_load()
     def launch_load(self):
-        thread = threading.Thread(target=self.load_json, args=())
+        thread = threading.Thread(target=self.load_json, args=()) # Cargado do json
         thread.start()
 
     def start_main_window(self, loaded_items_list):
@@ -31,7 +31,7 @@ class LoadWindow(Gtk.Window):
         self.disconnect_by_func(Gtk.main_quit)
         self.close()
     def load_json(self):
-        response = requests.get("https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/API-REST/catalog.json")
+        response = requests.get("https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/API-REST/catalog.json") # Chamada do json e formado da lista
         json_list = response.json()
 
         result = []
