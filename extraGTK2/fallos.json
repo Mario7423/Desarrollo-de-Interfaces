@@ -1,25 +1,25 @@
 [
   {
     "fallos": 1,
-    "url_imagen":dsaf
+    "url_imagen": "https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/extraGTK2/fase1.jpg"
   },
   {
     "fallos": 2,
-    "url_imagen":sdnafa
+    "url_imagen": "https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/extraGTK2/fase2.jpg"
   },
   {
     "fallos":3,
-    "ulr_imagen":dnsfjxsa
+    "ulr_imagen": "https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/extraGTK2/fase3.jpg"
   },
   {
      "fallos":4,
-    "ulr_imagen":dnsfjxsa
+    "ulr_imagen": "https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/extraGTK2/fase4.jpg"
   },
   {
      "fallos":5,
-    "ulr_imagen":dnsfjxsa
+    "ulr_imagen": "https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/extraGTK2/fase5.jpg"
   },
   { "fallos":6,
-    "ulr_imagen":dnsfjxsa
+    "ulr_imagen": "https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/extraGTK2/fase6.jpg"
   }
 ]
