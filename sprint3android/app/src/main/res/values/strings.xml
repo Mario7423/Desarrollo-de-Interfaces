@@ -2,4 +2,11 @@
     <string name="app_name">My Catalog</string>
     <string name="navigation_drawer_open">\"Abierto\"</string>
     <string name="navigation_drawer_close">\"Cerrado\"</string>
+    <string name="menu_camera">Cámara</string>
+    <string name="menu_gallery">Menu_Gallery</string>
+    <string name="menu_tools">\"Menu_Tools\"</string>
+    <string name="menu_share">\"Menu_Share\"</string>
+    <string name="menu_send">\"Menu_Send\"</string>
+    <string name="menu_group">\"Menu_Group\"</string>
+    <string name="copyright">\"copyright\"</string>
 </resources>
