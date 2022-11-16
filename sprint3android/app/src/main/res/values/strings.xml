@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">\"My Catalog\"</string>
-    <string name="navigation_drawer_open">\"Abierto\"</string>
-    <string name="navigation_drawer_close">\"Cerrado\"</string>
+    <string name="navigation_drawer_open">\"Open\"</string>
+    <string name="navigation_drawer_close">\"Close\"</string>
     <string name="menu_camera">\"Camara\"</string>
     <string name="menu_gallery">\"Menu_Gallery\"</string>
     <string name="menu_tools">\"Menu_Tools\"</string>
