@@ -22,5 +22,15 @@
         app:layout_constraintStart_toEndOf="@+id/dog_image_view"
         android:id="@+id/dog_name_text_view"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/details"
+        app:layout_constraintStart_toEndOf="@id/dog_name_text_view"
+        app:layout_constraintTop_toTopOf="@+id/dog_image_view"
+        app:layout_constraintBottom_toBottomOf="@+id/dog_image_view"
+        android:layout_marginStart="50dp"
+        android:text="Detalles"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

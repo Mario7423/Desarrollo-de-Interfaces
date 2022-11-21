@@ -5,7 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -28,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Context context = this;
+        //Button details = DogViewHolder.details;
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         Activity activity = this;
@@ -59,6 +65,13 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(activity, "ERROR", Toast.LENGTH_SHORT).show();
                     }
                 });
+       /* DogViewHolder.details.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(context, DetailActivity.class);
+                context.startActivity(myIntent);
+            }
+        });*/
         RequestQueue cola = Volley.newRequestQueue(this);
         cola.add(request);
     }
