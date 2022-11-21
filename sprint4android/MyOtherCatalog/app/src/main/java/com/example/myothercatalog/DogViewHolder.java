@@ -29,8 +29,14 @@ public class DogViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         titulo = (TextView) itemView.findViewById(R.id.dog_name_text_view);
         foto = (ImageView) itemView.findViewById(R.id.dog_image_view);
-        details = (Button) itemView.findViewById(R.id.details);
-        onBindViewHolder(this);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "HOLA",Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(context, DetailActivity.class);
+                context.startActivity(myIntent);
+            }
+        });
     }
 
     public void showData(DogData data, Activity activity){
@@ -66,16 +72,6 @@ public class DogViewHolder extends RecyclerView.ViewHolder {
         return image;
     }
 
-    public void onBindViewHolder(DogViewHolder holder) {
-        holder.details.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "HOLA",Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(context, DetailActivity.class);
-                context.startActivity(myIntent);
-            }
-        });
-    }
 }
 
 

@@ -1,5 +1,6 @@
 package com.example.myothercatalog;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -36,6 +38,27 @@ public class MainActivity extends AppCompatActivity {
         //Button details = DogViewHolder.details;
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.addOnItemTouchListener(
+                new RecyclerView.OnItemTouchListener() {
+                    @Override
+                    public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+                        Toast.makeText(context,"Hola",Toast.LENGTH_SHORT).show();
+                        Intent myIntent = new Intent(context, DetailActivity.class);
+                        context.startActivity(myIntent);
+                        return false;
+                    }
+
+                    @Override
+                    public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+
+                    }
+
+                    @Override
+                    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+                    }
+                }
+        );
         Activity activity = this;
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET,

@@ -12,6 +12,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        android:id="@+id/dog_name_text_view"/>
-
+        android:text="Hola qué tal"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/details"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="50dp"
+        android:text="Detalles"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
