@@ -38,27 +38,6 @@ public class MainActivity extends AppCompatActivity {
         //Button details = DogViewHolder.details;
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.addOnItemTouchListener(
-                new RecyclerView.OnItemTouchListener() {
-                    @Override
-                    public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-                        Toast.makeText(context,"Hola",Toast.LENGTH_SHORT).show();
-                        Intent myIntent = new Intent(context, DetailActivity.class);
-                        context.startActivity(myIntent);
-                        return false;
-                    }
-
-                    @Override
-                    public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-
-                    }
-
-                    @Override
-                    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
-                    }
-                }
-        );
         Activity activity = this;
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET,

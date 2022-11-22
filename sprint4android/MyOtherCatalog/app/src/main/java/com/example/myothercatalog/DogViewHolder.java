@@ -22,27 +22,31 @@ import java.net.URL;
 public class DogViewHolder extends RecyclerView.ViewHolder {
     private final TextView titulo;
     private final ImageView foto;
-    public static Button details;
-    public Context context;
+    private final View holder;
+    //public static Button details;
+    public Context context=this.itemView.getContext();
 
     public DogViewHolder(@NonNull View itemView){
         super(itemView);
         titulo = (TextView) itemView.findViewById(R.id.dog_name_text_view);
         foto = (ImageView) itemView.findViewById(R.id.dog_image_view);
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "HOLA",Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(context, DetailActivity.class);
-                context.startActivity(myIntent);
-            }
-        });
+        holder = (View) itemView.findViewById(R.id.holder);
     }
 
     public void showData(DogData data, Activity activity){
         titulo.setText(data.getName());
         cancelPreviousImageDownloadIfAny();
         loadImage(data.getImageUrl(), activity);
+        holder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "HOLA",Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(context, DetailActivity.class);
+                myIntent.putExtra("titulo", data.getName());
+                myIntent.putExtra("foto", data.getImageUrl());
+                context.startActivity(myIntent);
+            }
+        });
     }
 
     private void cancelPreviousImageDownloadIfAny(){}

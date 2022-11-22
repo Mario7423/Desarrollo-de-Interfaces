@@ -10,5 +10,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_activity);
+        String titulo = getIntent().getStringExtra("titulo");
+        String foto = getIntent().getStringExtra("foto");
     }
 }
