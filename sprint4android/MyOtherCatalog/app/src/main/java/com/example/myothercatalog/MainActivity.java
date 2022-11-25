@@ -35,11 +35,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Context context = this;
-        //Button details = DogViewHolder.details;
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);   //Cargamos el RecyclerView
         Activity activity = this;
-        JsonArrayRequest request = new JsonArrayRequest(
+        JsonArrayRequest request = new JsonArrayRequest( // Cargamos el JsonArrayRequest e instanciamos el Adapter y el Holder
                 Request.Method.GET,
                 "https://raw.githubusercontent.com/Mario7423/Desarrollo-de-Interfaces/main/API-REST/catalog.json",
                 null,
@@ -63,17 +62,10 @@ public class MainActivity extends AppCompatActivity {
                 },
                 new Response.ErrorListener() {
                     @Override
-                    public void onErrorResponse(VolleyError error) {
+                    public void onErrorResponse(VolleyError error) { //Toast para un posible error
                         Toast.makeText(activity, "ERROR", Toast.LENGTH_SHORT).show();
                     }
                 });
-       /* DogViewHolder.details.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(context, DetailActivity.class);
-                context.startActivity(myIntent);
-            }
-        });*/
         RequestQueue cola = Volley.newRequestQueue(this);
         cola.add(request);
     }

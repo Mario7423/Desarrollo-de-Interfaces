@@ -37,13 +37,15 @@ public class DogViewHolder extends RecyclerView.ViewHolder {
         titulo.setText(data.getName());
         cancelPreviousImageDownloadIfAny();
         loadImage(data.getImageUrl(), activity);
+        //Bitmap image = getBitmapFromURL(data.getImageUrl());
         holder.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "HOLA",Toast.LENGTH_SHORT).show();
+            public void onClick(View view) { //Según la celda pulsada, se envia a DetailActivity la información necesaria en un Intent
+                //Toast.makeText(context, "HOLA",Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(context, DetailActivity.class);
                 myIntent.putExtra("titulo", data.getName());
                 myIntent.putExtra("foto", data.getImageUrl());
+                //myIntent.putExtra("BitmapImage", image);
                 context.startActivity(myIntent);
             }
         });
@@ -51,7 +53,7 @@ public class DogViewHolder extends RecyclerView.ViewHolder {
 
     private void cancelPreviousImageDownloadIfAny(){}
 
-    private void loadImage(String imageUrl, Activity activity){
+    private void loadImage(String imageUrl, Activity activity){ //Cargamos la imagen desde el Bitmap enviado por getBitmapFromUrl
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -67,7 +69,7 @@ public class DogViewHolder extends RecyclerView.ViewHolder {
         thread.start();
     }
 
-    private Bitmap getBitmapFromURL(String urlString) {
+    private Bitmap getBitmapFromURL(String urlString) { //Formación del Bitmap gracias a la url enviada
         Bitmap image = null;
         try {
             URL url = new URL(urlString);

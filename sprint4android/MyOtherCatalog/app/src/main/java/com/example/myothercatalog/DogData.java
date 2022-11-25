@@ -7,7 +7,7 @@ public class DogData {
     private String name;
     private String imageUrl;
 
-    public DogData(String name, String imageUrl){
+    public DogData(String name, String imageUrl){       //Clase de DogData con constructor, set y get
         this.name = name;
         this.imageUrl = imageUrl;
     }
