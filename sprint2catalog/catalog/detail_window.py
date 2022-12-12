@@ -7,9 +7,9 @@ from cell import Cell
 #Formamos a ventá detallada das opcións dispoñibles en window
 
 class DetailWindow(Gtk.Window):
-    label = Gtk.Label()
+    """label = Gtk.Label()
     image = Gtk.Image()
-    label2 = Gtk.Label()
+    label2 = Gtk.Label()"""
 
     def __init__(self, label, image, label2): #Engadimos os dous labels, un co nome e outro ca descripción, máis unha imaxe.
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)

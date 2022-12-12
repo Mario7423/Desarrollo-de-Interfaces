@@ -11,6 +11,7 @@ class Cell(Gtk.EventBox):
     def __init__(self, name, image):
         super().__init__()
         self.name = name    #Elabórase unha box con orientación vertical e engádeselle unha imaxe e un label.
+        self.image = image
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
         box.pack_start(Gtk.Label(label=name), False, False, 0)
         box.pack_start(image, True, True, 0)
@@ -29,4 +30,6 @@ class Cell(Gtk.EventBox):
             win = DetailWindow(Gtk.Label("Ovejero"), Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Ovejero-edited.jpg"), Gtk.Label("Un perro peludo"))
         elif self.name == "Boyero de Verna":
             win = DetailWindow(Gtk.Label("Boyero de Verna"), Gtk.Image.new_from_file("C:\\msys64\\home\\usuario\\Desarrollo-de-Interfaces\\sprint1gtk\\catalog\\data\\edited\\Boyero-de-Verna-edited.jpg"), Gtk.Label("Un perro fiel"))
+        #from detail_window import DetailWindow
+        #win = DetailWindow(Gtk.Label(self.name), self.image, Gtk.Label("Holi"))
         win.show_all()
